@@ -25,6 +25,8 @@ function add(numbers) {
     }
   }
 
+   const numArray = numberString.split(delimiter).map(n => parseInt(n, 10)).filter(n => !isNaN(n));
+  const negatives = numArray.filter(n => n < 0);
   return numberString; 
   
 }
