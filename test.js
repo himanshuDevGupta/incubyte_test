@@ -35,3 +35,8 @@ function add(numbers) {
 
   
 }
+
+console.log(add("")); // 0 output should be
+// console.log(add("1")); // 1
+// console.log(add("1,2")); // 3
+// console.log(add("1\n2,3")); // 6
