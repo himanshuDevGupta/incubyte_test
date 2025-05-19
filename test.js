@@ -27,6 +27,11 @@ function add(numbers) {
 
    const numArray = numberString.split(delimiter).map(n => parseInt(n, 10)).filter(n => !isNaN(n));
   const negatives = numArray.filter(n => n < 0);
-  return numberString; 
+ if (negatives.length > 0) {
+    throw new Error("negative numbers not allowed: " + negatives.join(","));
+  }
+
+  return numArray.reduce((sum, num) => sum + num, 0);
+
   
 }
